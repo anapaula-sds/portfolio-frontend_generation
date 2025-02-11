@@ -21,7 +21,7 @@
 
             <!--Título do Cabeçalho -->
             <div id="titulo">
-                <a href="#">Ana Paulas'Code</a>
+                <a href="#">Ana Paula's Code</a>
             </div>
 
             <div id="menu" class="flex">
@@ -57,21 +57,7 @@
         </section>
 
         <section id="about" class="flex about_container">
-            <img src="./assets/img/user_02.svg" alt="Foto do Perfil do Github">
-
-            <article id="about-texto" class="about_content">
-                <h1>Sobre Mim</h1>
-                <p>Sou Ana Paula Santana da Silva, Formada em Sistemas de Informação pela UNINOVE, estudante de Ciências de Dados na Cruzeiro do Sul e especializada em Desenvolvimento Full Stack Javascript pela Generation Brasil. <br> "Apaixonada por Tecnologia desde criança quando era incentivada pelo Pai a crescer na área" <br> Desde meus 10 anos já incluída no mundo digital, meu pai que é e sempre foi meu maior incentivador, me presenteava desde cedo com computadores, coleções de jogos e Enciclopédias digitais. <br> Em seguida vieram os acessos a Internet e com isso a curiosidade: "-Como que essa magia funciona?". <br> </p>
-
-                <div id="about_github">
-                    <a href="https://github.com/anapaula-sds" target="_blank" class="botao"
-                    >
-                        github
-                    </a>
-                    <p>200 Seguidores</p>
-                    <p>20 Repositórios</p>
-                </div>
-            </article>
+            
         </section>
 
         <section id="contact" class="contato_container">
@@ -81,7 +67,7 @@
                 <p>Gostou do meu perfil? Quer saber mais sobre meus projetos e como posso ajudar você? Sinta-se à vontade para entrar em contato! Abaixo, você encontrará links para minhas redes sociais, onde podemos trocar ideias, compartilhar conhecimentos e discutir desafios da sua carreira. Quem sabe podemos encontrar juntos a solução eficaz e humanizada que você procura?</p>
             
                 <!--Redes sociais-->
-            <div id="social_icon" class=".social_content">
+            <div id="social_icon" class="social_container">
                 <a href="https://www.linkedin.com/in/anapaula-sds/" target="_blank">
                     <img src="./assets/img/linkedin.svg" alt="logo do Linkedin" class="social_icon">
                 </a>
@@ -97,8 +83,10 @@
             </div>
         </article>
 
-            <form action="" method="post">
-
+        <form action="https://formsubmit.co/538a03e9e03185e1f48050c9dcce5250" method="POST" id="formulario">
+ 
+            <input type="hidden" name="_next" value="http://127.0.0.1:5501/sucess.html">
+            <input type="hidden" name="_captcha" value="false">
                 <label for="nome">Nome</label>
                 <input 
                     id="nome" 
@@ -139,5 +127,7 @@
     <footer>
         Feito com 🧡 por Ana Paula santana 👩‍🚀- 2025
     </footer>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

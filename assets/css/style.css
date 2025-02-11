@@ -1,7 +1,7 @@
 :root {
-    --purple-200: #91ae6f;
-    --purple-500: #91ae6f;
-    --purple-800: #64e8e1;
+    --verdeoliva: #91ae6f;
+    --verdemato: #3fb26d;
+    --azulpiscina: #64e8e1;
  
     --gray-200: #f1fffe;
     --gray-400: #505861;
@@ -30,7 +30,11 @@ html {
 body {
     background-color: var(--gray-200);
     color: var(--black-800);
+
+    /* Exibe as fontes com um traço mais fino e suave (Chrome e Edge) */
     -webkit-font-smoothing: antialiased;
+
+    /* Exibe as fontes com um traço mais fino e suave (Firefox) */
     -moz-osx-font-smoothing: grayscale;
 }
 
@@ -39,16 +43,19 @@ button, a{
 }
 
 .botao{
-    text-align: center;
-    padding: 12px 32px;
-    background: none;
-    border: 1px solid var(--purple-800);
+
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--azulpiscina);
     border-radius: 10px;
+    font-size: 1rem;
     font-weight: 700;
+    color: var(--purple-800);
+    background: none;
+    text-align: center;
 }
 
 .botao:hover{
-    background: var(--purple-800);
+    background: var(--azulpiscina);
     color: var(--white);
 }
 
@@ -61,22 +68,30 @@ button, a{
 /* Estilização Seção Header */
 
 .menu_container{
-    height: 80px;
-    position: static;
+    position: sticky;
     top: 0;
     width: 100%;
-    background-color: var(--purple-800);
-    border-bottom: 1px solid var(--purple-500);
+    height: 5rem;
+    background-color: var(--azulpiscina);
+    border-bottom: 1px solid var(--verdemato);
+    /* Aplica transparência */
     filter: opacity(0.9);
 }
 
 .menu_container a{
     color: var(--white);
-    font-weight: 700;
+}
+
+#titulo a{
+    font-size: 2.25rem;
+}
+
+#titulo a:hover {
+    color: var(--verdemato); 
 }
 
 .menu_container a:hover{
-    color: var(--purple-200);
+    color: var(--verdeoliva);
 }
 
 .menu_content{
@@ -100,9 +115,9 @@ button, a{
 
 .home_container{
     max-width: 1120px;
-    margin: 16px auto;
+    margin: 1rem auto;
     padding: 0 1rem;
-    height: calc(100vh - 100px); /*Só vai aparecer a pagina home  -100px que é o menu e a margin*/
+    height: calc(100vh - 100px); /* Calcula altura do elemento (altura do navegador - altura do menu + 20px) */
 }
 
 .home_container p, h1, h4{
@@ -134,7 +149,6 @@ button, a{
 }
 
 .home_container img{
-    display: flex;
     width: 75%;
 }
 
@@ -163,47 +177,38 @@ button, a{
 }
 
 /* Estilização da seção Sobre */
-#about {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: left;
-    padding: 4rem 1rem;
-    color: var(--black-800);
-    gap: 2rem;
+.about_container {
+    max-width: 1120px;
+    margin: -1.25rem auto;
+    padding: 0 1rem;
+    height: 100vh;
 }
 
-#about img {
-    width: 150px;
-    border: 2px solid #64e8e1;
+.about_container img {
+    width: 30%;
+    margin: 1rem;
+    border: 5px solid var(--purple-500);
     border-radius: 50%;
 }
 
-#about-texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 600px;
-}
-
-#about h1 {
+.about_container h2 {
     font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 3rem;
+    text-align: center;
 }
 
-#about p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+.about_container p {
+    margin: 1rem 0;
+    text-align: center;
 }
 
-#about_github {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: center;
-    margin-top: 1rem;
+.about_github {
+    justify-content: space-evenly;
+}
+
+#about_texto {
+    margin-left: 2rem;
 }
 
 #about_github .botao {
@@ -242,11 +247,9 @@ button, a{
 
 /*Estlização da seção redes sociais*/
 .social_container{
-    display: flex;
-    align-items: center;
+    display:flex;
     justify-content: space-evenly;
     margin: 2rem 0 0 0;
-    gap: 1.5rem;
 }
 
 .social_icon{
@@ -254,8 +257,15 @@ button, a{
     height: 4.75rem;
 }
 
-.social_icon:hover{
-    filter: brightness(0) saturate(100%) invert(20%) sepia(24%) saturate(4557%) hue-rotate(242deg) brightness(89%) contrast(108%);
+.social_icon:hover {
+    filter: brightness(0) 
+            saturate(100%) 
+            invert(55%) 
+            sepia(18%) 
+            saturate(2000%) 
+            hue-rotate(170deg) 
+            brightness(95%) 
+            contrast(105%);
 }
 
 /*Estilização da seção Form*/
@@ -296,18 +306,20 @@ form span{
 
 /* Estilização do Rodapé */
 footer {
+    margin: 0;
+    padding: 2rem;
+    font-weight: bold;
     text-align: center;
-    padding: 1rem;
-    background-color: var(--purple-800);
+    background-color: var(--azulpiscina);
     color: var(--white);
-    font-weight: 700;
+    filter: opacity(0.9);
 }
 
 /*MODO RESPONSIVO*/
 
 /*Smartphone - Telas até 480px*/
 
-@media screen and (max-width: 480px){   
+@media screen and (max-width: 490px){   
     body{
         display: flex;
         flex-direction: column;
@@ -337,7 +349,7 @@ footer {
     }
 
     #titulo a{
-        font-size: 1.75rem;
+        font-size: 3rem;
     }
 
     .menu_list{
@@ -397,6 +409,10 @@ footer {
         gap: 0.5rem;
     }
 
+    .sobre_github p{
+        display: none;
+    }
+
     .about_github .botao{
         width: 80%;
     }
@@ -443,5 +459,100 @@ footer {
         padding: 1rem;
     }
 
+
+    /* Tablet - Para telas até 960px */
+
+@media screen and (max-width: 960px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+
+        /* Altura minima será a altura da tela */
+        min-height: 100vh;
+    }
+
+    main {
+
+        /* A seção ocupará todo o espaço disponível */
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        /* O Footer será "empurrado" para o final da tela */
+        margin-top: auto;
+    }
+
+    /* Ajustes Home */
+
+    .home_container {
+        flex-direction: column-reverse;
+        gap: 0;
+        height: auto;
+        margin-top: 0;
+        padding: 32px 16px;
+    }
+
+    .home_content {
+        width: 100%;
+        margin: 0;
+    }
+
+    #home_texto {
+        margin-top: 1rem;
+    }
+
+    #home_imagem {
+        margin-bottom: 0;
+    }
+
+    .home_content .botao {
+        width: 60%;
+        margin-top: 1.5rem;
+    }
+
+    .home_content_img {
+        width: 60%;
+    }
+
+    /* Ajustes Sobre */
+
+    .sobre_container {
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+    }
+
+    .sobre_container img {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    #sobre_texto {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Ajustes Contato */
+    
+    .contato_container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 1rem auto;
+    }
+
+    .contato_content {
+        margin: 1rem 0 0 0;
+    }
+
+    form {
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+}
 
 }
