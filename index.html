@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Projetos de Ana Paula">
+    <meta name="author" content="Ana Paula Santana da Silva">
+    <meta name="keywords" content="HTML, CSS, Javascript">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Portfólio Ana Paula</title>
+</head>
+<body>
+    <!-- Cabeçalho da Página -->
+    <header class="flex menu_container">
+
+        <div id="header_content" class="menu_content">
+
+            <!--Título do Cabeçalho -->
+            <div id="titulo">
+                <a href="#">Ana Paulas'Code</a>
+            </div>
+
+            <div id="menu" class="flex">
+                <nav>
+                    <!-- Marcadores não Ordenados -->
+                    <ul class="flex menu_list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sessão Principal da Página -->
+    <main>
+
+        <section id="home" class="flex home_container">
+            <article id="home-texto" class="flex home_content">
+                <h4>Bem Vindo ao Meu Portfólio de Projetos</h4>
+                <h1>Inovação em Código, Soluções em Tecnologia!</h1>
+                <p>Seja bem-vindo ao meu portfólio! Aqui você encontrará projetos que refletem minha paixão por tecnologia e inovação. Explore meu trabalho, conheça minhas soluções e descubra como posso transformar ideias em realidade. Fique à vontade para navegar e entrar em contato!</p>
+                <a href="https://github.com/anapaula-sds" target="_blank" class="botao">
+                    Explorar
+                </a>
+            </article>
+
+            <article id="home-imagem" class="home_content">
+                <img src="./assets/img/girl.gif" alt="Menina Inteligente com flores na aurea">
+
+            </article>
+        </section>
+
+        <section id="about" class="flex about_container">
+            <img src="./assets/img/user_02.svg" alt="Foto do Perfil do Github">
+
+            <article id="about-texto" class="about_content">
+                <h1>Sobre Mim</h1>
+                <p>Sou Ana Paula Santana da Silva, Formada em Sistemas de Informação pela UNINOVE, estudante de Ciências de Dados na Cruzeiro do Sul e especializada em Desenvolvimento Full Stack Javascript pela Generation Brasil. <br> "Apaixonada por Tecnologia desde criança quando era incentivada pelo Pai a crescer na área" <br> Desde meus 10 anos já incluída no mundo digital, meu pai que é e sempre foi meu maior incentivador, me presenteava desde cedo com computadores, coleções de jogos e Enciclopédias digitais. <br> Em seguida vieram os acessos a Internet e com isso a curiosidade: "-Como que essa magia funciona?". <br> </p>
+
+                <div id="about_github">
+                    <a href="https://github.com/anapaula-sds" target="_blank" class="botao"
+                    >
+                        github
+                    </a>
+                    <p>200 Seguidores</p>
+                    <p>20 Repositórios</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="contato_container">
+
+            <article id="redes_sociais" class=".contato_container">
+                <h4>Contate-me</h4>
+                <p>Gostou do meu perfil? Quer saber mais sobre meus projetos e como posso ajudar você? Sinta-se à vontade para entrar em contato! Abaixo, você encontrará links para minhas redes sociais, onde podemos trocar ideias, compartilhar conhecimentos e discutir desafios da sua carreira. Quem sabe podemos encontrar juntos a solução eficaz e humanizada que você procura?</p>
+            
+                <!--Redes sociais-->
+            <div id="social_icon" class=".social_content">
+                <a href="https://www.linkedin.com/in/anapaula-sds/" target="_blank">
+                    <img src="./assets/img/linkedin.svg" alt="logo do Linkedin" class="social_icon">
+                </a>
+                <a href="https://www.linkedin.com/in/anapaula-sds/" target="_blank">
+                    <img src="./assets/img/github.svg" alt="logo do Github" class="social_icon">
+                </a>
+                <a href="https://www.linkedin.com/in/anapaula-sds/" target="_blank">
+                    <img src="./assets/img/instagram.svg" alt="logo do Instagram" class="social_icon">
+                </a>
+                <a href="https://www.linkedin.com/in/anapaula-sds/" target="_blank">
+                    <img src="./assets/img/facebook.svg" alt="logo do Facebook" class="social_icon">
+                </a>
+            </div>
+        </article>
+
+            <form action="" method="post">
+
+                <label for="nome">Nome</label>
+                <input 
+                    id="nome" 
+                    type="text" 
+                    name="nome"
+                    placeholder="Digite o seu nome: ">
+                <span id="txtNome"></span>
+
+                <label for="email">E-mail</label>
+                <input 
+                    id="email" 
+                    type="text" 
+                    name="email"
+                    placeholder="Digite o seu e-mail: ">
+                <span id="txtEmail"></span>
+
+                <label for="assunto">Assunto</label>
+                <input 
+                    id="assunto" 
+                    type="text" 
+                    name="assunto"
+                    placeholder="Digite o assunto da mensagem: ">
+                <span id="txtAssunto"></span>
+
+                <label for="mensagem">Mensagem</label>
+                <textarea 
+                    id=""
+                    name="mensagem"
+                    placeholder="Digite a sua mensagem: ">
+                </textarea>
+                <button type="submit" class="botao"><a href="./sucess.html">Enviar</a></button>
+            </form>
+
+        </section>
+    </main>
+    
+    <!-- Rodapé da Página -->
+    <footer>
+        Feito com 🧡 por Ana Paula santana 👩‍🚀- 2025
+    </footer>
+</body>
+</html>
